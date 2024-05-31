@@ -1,0 +1,27 @@
+/* ===================================================================
+ * # SITE HEADER
+ *
+ *
+ * ------------------------------------------------------------------- */
+.s-header {
+	--header-height: 50px;
+	--logo-width   : 6.6rem;
+	--box-shadow   : 0 1px 1px rgba(0, 0, 0, 0.02),
+		             0 2px 2px rgba(0, 0, 0, 0.02),
+		             0 4px 4px rgba(0, 0, 0, 0.02),
+		             0 8px 8px rgba(0, 0, 0, 0.02);
+	--box-shadow-2:  0 2px 2px rgba(0, 0, 0, 0.03),
+		             0 4px 4px rgba(0, 0, 0, 0.03),
+		             0 8px 8px rgba(0, 0, 0, 0.03),
+		              16px 16px rgba(0, 0, 0, 0.03);
+	z-index         : 100;
+	background-color: transparent;
+	height          : var(--header-height);
+	width           : 100%;
+	position        : absolute;
+	top             : var(--vspace-0_75);
+	left            : 0;
+}
+.header-inner {
+  margin-bottom: 30px;
+}
