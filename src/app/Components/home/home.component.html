@@ -1,7 +1,7 @@
 <header class="s-header bg-dark" >
 
     <div class="row header-inner bg-light">
-        <div class="col-md-4 bg-primary" >
+        <div class="col-md-4" >
             <div class="s-header__block">
                 <div class="s-header__logo">
                     <a class="logo" routerLink="/">
@@ -12,22 +12,88 @@
                 <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
             </div> <!-- end s-header__block -->
         </div>
-        <div class="col-md-4 bg-warning">
-            <ul class="s-header__menu-links">
+        <div class="col-md-4">
+            <ul class="s-header-menu">
                 <li class="current"><a routerLink="/">Home</a></li>
                 <li><a routerLink="/about">About</a></li>
                 <li><a routerLink="/service">Services</a></li>
                 <li><a routerLink="/blog">Blogs</a></li>
                 <li><a routerLink="/contact">Contact</a></li>
             </ul> <!-- s-header__menu-links -->
-
-           
         </div>
-        <div class="col-md-4 bg-success">
-            <div class="s-header__contact">
+        <div class="col-md-4">
+            <!-- <div class="s-header__contact">
                 <a routerLink ="/contact" class="btn btn--primary s-header__contact-btn">Let's Work Together</a>                        
-            </div>
+            </div> -->
+            <!-- <button type="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover 1" data-bs-content="Popover 1 Description">popover 1</button>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover 2" data-bs-content="Popover 2 Description">popover 2</button>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="popover" title="Popover 3" data-bs-content="Popover 3 Description">popover 3</button> -->
+
+            <div class="dropdown ms-auto">
+                <button>Languages</button>
+                <div class="dropdown-options">
+                  <a href="#">English</a>
+                  <a href="#">Urdu</a>
+                  <a href="#">Spanish</a>
+                </div>
+              </div>
+
         </div>
+
+        <div class="div">
+
+            <div class="backdrop"></div>
+            <dialog #dialog class="login-box" [class]="isDarkMode ? 'login-box dark-mode' : 'login-box light-mode'">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeSwitch" (change)="toggleMode()">
+                    <label class="form-check-label" for="darkModeSwitch">Dark Mode</label>
+                  </div>
+                <i class="fa-solid fa-circle-xmark"></i>
+                <h2>Login</h2>
+                <form>
+                    <div class="user-box">
+                        <input type="text" name="" required="">
+                        <label>Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="" required="">
+                        <label>Password</label>
+                    </div>
+                </form>
+            </dialog>
+              
+              <!-- <button  (click)="openModal()" type="button" class="btn btn-secondary">Dialog</button> -->
+        
+              <p #text></p>
+              
+        </div>
+
+
+
+
     </div>
 
+
+<!-- <div class="border">
+    <h1><code>light-dark()</code> CSS function</h1>
+    <section>
+      <h2>Automatic</h2>
+      <p>This section will react to the users system or user agent setting.</p>
+    </section>
+    <section class="light">
+      <h2>Light</h2>
+      <p>
+        This section will be light due to the <code>color-scheme: light;</code>.
+      </p>
+    </section>
+    <section class="dark">
+      <h2>Dark</h2>
+      <p>This section will be dark due to the <code>color-scheme: dark;</code>.</p>
+    </section>
+</div> -->
+
 </header>
+
+
+
+
